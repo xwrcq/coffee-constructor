@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<title>Make order</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/order.css">
+	<script type="module" src="js/burger.js" defer></script>	
+	<script type="module" src="js/basket.js" defer></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container container">
+				<nav class="header__navbar">
+					<a class="header__logo" href="index.html" id="logo"><img src="images/header/logo.svg"
+							alt="logo"></a>
+					<div class="header__links" id="links-menu">
+						<a href="index.html" class="header__link">MAIN</a>
+						<a href="purchases.html" class="header__link">ALL ORDERS</a>
+					</div>
+					<ul class="header__btns" id="btns-menu">
+				
+						<a class="header__btn header__btn-busket" href="#"><img src="images/header/basket.svg"
+								alt="basket"></a>
+					</ul>
+					<div class="header__burger" id="burger">
+						<span></span>
+					</div>
+					<div class="header__popup" id="popup"></div>
+				</nav>
+			</div>
+		</header>
+		<main class="page">
+			<div class="page__basket-orders basket-orders">
+				<div class="basket-orders__container container">
+					<div class="basket-orders__title hide"></div>
+					<div class="basket-orders__cards">
+						<!-- <div class="basket-orders__card card-orders">
+							<div class="card-orders__title basket-orders__title-order">test title</div>
+							<div class="card-orders__image-container basket-orders__image-container-order">
+								<img src="" alt="Coffee cup" class="card-orders__img basket-orders__img-order">
+							</div>
+							<div class="card-orders__characters basket-orders__characters-order">test characters</div>
+							<button class="basket-orders__btn-order card-orders__btn btn">MAKE ORDER</button>
+						</div> -->
+					</div>
+					<!-- <div class="basket-orders__modal">
+						<form class="basket-orders__modal-content content-modal">
+							<div class="content-modal__close">X</div>
+							<div class="content-modal__title">test</div>
+							<input class="content-modal__comment" type="text" placeholder="leave comment...">
+							<div class="content-modal__rating">
+								<a href="#" class="content-modal__star"><svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24">
+										<path
+											d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+									</svg></a>
+								<a href="#" class="content-modal__star"><svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24">
+										<path
+											d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+									</svg></a>
+								<a href="#" class="content-modal__star"><svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24">
+										<path
+											d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+									</svg></a>
+								<a href="#" class="content-modal__star"><svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24">
+										<path
+											d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+									</svg></a>
+								<a href="#" class="content-modal__star"><svg xmlns="http://www.w3.org/2000/svg"
+										width="24" height="24" viewBox="0 0 24 24">
+										<path
+											d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+									</svg></a>
+							</div>
+							<button class="content-modal__btn btn">MAKE ORDER</button>
+						</form>
+					</div> -->
+				</div>
+			</div>
+		</main>
+	</div>
+</body>
+
+</html>

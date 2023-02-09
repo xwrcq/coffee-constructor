@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+	<title>purchases</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/purchases.css">
+	<script type="module" src="js/burger.js" defer></script>	
+	<script type="module" src="js/purchases.js" defer></script>
+	<script src="js/sidebar.js" defer></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header__container container">
+			<nav class="header__navbar">
+				<a class="header__logo" href="index.html" id="logo"><img src="images/header/logo.svg" alt="logo"></a>
+				<div class="header__links" id="links-menu">
+						<a href="index.html" class="header__link">MAIN</a>
+						<a href="purchases.html" class="header__link">ALL ORDERS</a>
+					</div>
+				<ul class="header__btns" id="btns-menu">
+	
+					<a class="header__btn header__btn-busket" href="order.html"><img src="images/header/basket.svg"
+							alt="basket"></a>
+				</ul>
+				<div class="header__burger" id="burger">
+					<span></span>
+				</div>
+				<div class="header__popup" id="popup"></div>
+			</nav>
+		</div>
+	</header>
+	<main class="page">
+		<div class="page__purchases purchases">
+			<div class="purchases__conainer">
+				<div class="purchases__sidebar sidebar">
+					<div class="sidebar__content">
+						<div class="sidebar__item">
+							<div class="sidebar__selector">Type</div>
+							<div class="sidebar__menu">
+								<label class="sidebar__filter-item" data-name="type" data-value="hot">Hot
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="type" data-value="cold">Cold
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__selector">Cup size</div>
+							<div class="sidebar__menu">
+								<label class="sidebar__filter-item" data-name="cup" data-value="s-cup">S
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="cup" data-value="m-cup">M
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="cup" data-value="l-cup">L
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="cup" data-value="xl-cup">XL
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__selector">Milk</div>
+							<div class="sidebar__menu">
+								<label class="sidebar__filter-item" data-name="milk" data-value="milk-add">Yes
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="milk" data-value="milk-remove">No
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+							</div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__selector">Syrup</div>
+							<div class="sidebar__menu">
+								<label class="sidebar__filter-item" data-name="syrup" data-value="no-syrup">No syrup
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="vanilla">Vanilla
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="caramel">Caramel
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="chocolate">Chocolate
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="hazelnut">Hazelnut
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="lavender">Lavender
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="coconut">Coconut
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="strawberry">Strawberry
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+								<label class="sidebar__filter-item" data-name="syrup" data-value="banana">Banana
+									<input class="sidebar__checkbox" type="checkbox">
+									<span class="sidebar__checkmark"></span>
+								</label>
+
+							</div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__selector slider-sidebar">Caffeine</div>
+							<div class="slider-sidebar__container">
+								<div class="slider-sidebar__control">
+									<input class="slider-sidebar__slider fromSlider" id="slider-sidebar__fromSlider-from-c" step="10"
+										type="range" value="30" min="30" max="180" data-name="caffeine" />
+									<input class="slider-sidebar__slider toSlider" step="10" type="range" value="180"
+										min="30" max="180" data-name="caffeine" />
+								</div>
+								<div class="slider-sidebar__form form-slider">
+									<div class="form-slider__container">
+										<div class="form-slider__text">Min</div>
+										<input class="form-slider__input fromInput" type="number" value="30" min="30"
+											max="180" step="10" data-name="caffeine" />
+									</div>
+									<div class="form-slider__container">
+										<div class="form-slider__text">Max</div>
+										<input class="form-slider__input toInput" type="number" value="180" min="30"
+											max="180" step="10" data-name="caffeine" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__selector slider-sidebar">Sugar</div>
+							<div class="slider-sidebar__container">
+								<div class="slider-sidebar__control">
+									<input class="slider-sidebar__slider fromSlider" id="slider-sidebar__fromSlider-from-c"
+										step="5" type="range" value="0" min="0" max="50" data-name="sugar" />
+									<input class="slider-sidebar__slider toSlider" step="5" type="range" value="50" min="0"
+										max="50" data-name="sugar" />
+								</div>
+								<div class="slider-sidebar__form">
+									<div class="form-slider__container">
+										<div class="form-slider__text">Min</div>
+										<input class="form-slider__input fromInput" type="number" value="0" min="0"
+											max="50" step="5" data-name="sugar" />
+									</div>
+									<div class="form-slider__container">
+										<div class="form-slider__text">Max</div>
+										<input class="form-slider__input toInput" type="number" value="50" min="0"
+											max="50" step="5" data-name="sugar" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="sidebar__item">
+							<div class="sidebar__selector slider-sidebar">Price</div>
+							<div class="slider-sidebar__container">
+								<div class="slider-sidebar__control">
+									<input class="slider-sidebar__slider fromSlider" id="slider-sidebar__fromSlider-from-p"
+										step="5" type="range" value="10" min="10" max="200" data-name="price" />
+									<input class="slider-sidebar__slider toSlider" step="5" type="range" value="200" min="10"
+										max="200" data-name="price" />
+								</div>
+								<div class="slider-sidebar__form">
+									<div class="form-slider__container">
+										<div class="form-slider__text">Min</div>
+										<input class="form-slider__input fromInput" type="number" value="10" min="10"
+											max="200" step="5" data-name="price" />
+									</div>
+									<div class="form-slider__container">
+										<div class="form-slider__text">Max</div>
+										<input class="form-slider__input toInput" type="number" value="200" min="10"
+											max="200" step="5" data-name="price" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="sidebar__burger" id="sidebar-burger">
+						<span></span>
+					</div>
+					<div class="sidebar__popup" id="sidebar-popup"></div>
+				</div>
+				<div class="purchases__content">
+					<div class="purchases__sort">
+						<div class="purchases__sort-item purchases__sort-item-disabled">Sort by</div>
+						<div class="purchases__sort-item active" data-sort="new">Newest</div>
+						<div class="purchases__sort-item" data-sort="old">Oldest</div>
+						<div class="purchases__sort-item" data-sort="popular">Most popular</div>
+						<div class="purchases__sort-item" data-sort="unpopular">Least popular</div>
+					</div>
+					<div class="purchases__loader"></div>
+					<div class="orders__cards cards">
+					</div>
+				</div>
+			</div>
+			<div class="purchases__pagination pagination">
+				<div class="pagination__container">
+					<button class="pagination__btn" id="prev-btn" title="Previous page">
+						&lt;
+					</button>
+					<div id="pagination-numbers">
+					</div>
+					<button class="pagination__btn" id="next-btn" title="Next page">
+						&gt;
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</main>
+</body>
+
+
+</html>
+
+<!-- <div class="sidebar__item">
+	<div class="sidebar__selector slider-sidebar">Caffeine</div>
+	<div class="slider-sidebar__container">
+		<div class="slider-sidebar__control">
+			<input class="slider-sidebar__fromSlider fromSlider" id="slider-sidebar__fromSlider-from-c" step="10"
+				type="range" value="30" min="30" max="180" data-name="caffeine" />
+			<input class="slider-sidebar__toSlider toSlider" step="10" type="range" value="180"
+				min="30" max="180" data-name="caffeine" />
+		</div>
+		<div class="slider-sidebar__form form-slider">
+			<div class="form-slider__container">
+				<div class="form-slider__text">Min</div>
+				<input class="form-slider__input fromInput" type="number" value="30" min="30"
+					max="180" step="10" data-name="caffeine" />
+			</div>
+			<div class="form-slider__container">
+				<div class="form-slider__text">Max</div>
+				<input class="form-slider__input toInput" type="number" value="180" min="30"
+					max="180" step="10" data-name="caffeine" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sidebar__item">
+	<div class="sidebar__selector slider-sidebar">Sugar</div>
+	<div class="slider-sidebar__container">
+		<div class="slider-sidebar__control">
+			<input class="slider-sidebar__fromSlider fromSlider" id="slider-sidebar__fromSlider-from-c"
+				step="5" type="range" value="0" min="0" max="50" data-name="sugar" />
+			<input class="slider-sidebar__toSlider toSlider" step="5" type="range" value="50" min="0"
+				max="50" data-name="sugar" />
+		</div>
+		<div class="slider-sidebar__form">
+			<div class="form-slider__container">
+				<div class="form-slider__text">Min</div>
+				<input class="form-slider__input fromInput" type="number" value="0" min="0"
+					max="50" step="5" data-name="sugar" />
+			</div>
+			<div class="form-slider__container">
+				<div class="form-slider__text">Max</div>
+				<input class="form-slider__input toInput" type="number" value="50" min="0"
+					max="50" step="5" data-name="sugar" />
+			</div>
+		</div>
+	</div>
+</div>
+<div class="sidebar__item">
+	<div class="sidebar__selector slider-sidebar">Price</div>
+	<div class="slider-sidebar__container">
+		<div class="slider-sidebar__control">
+			<input class="slider-sidebar__fromSlider fromSlider" id="slider-sidebar__fromSlider-from-p"
+				step="5" type="range" value="10" min="10" max="200" data-name="price" />
+			<input class="slider-sidebar__toSlider toSlider" step="5" type="range" value="200" min="10"
+				max="200" data-name="price" />
+		</div>
+		<div class="slider-sidebar__form">
+			<div class="form-slider__container">
+				<div class="form-slider__text">Min</div>
+				<input class="form-slider__input fromInput" type="number" value="10" min="10"
+					max="200" step="5" data-name="price" />
+			</div>
+			<div class="form-slider__container">
+				<div class="form-slider__text">Max</div>
+				<input class="form-slider__input toInput" type="number" value="200" min="10"
+					max="200" step="5" data-name="price" />
+			</div>
+		</div>
+	</div>
+</div> -->

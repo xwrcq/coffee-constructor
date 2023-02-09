@@ -1,0 +1,162 @@
+@import "nullstyle.scss";
+
+
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.page {
+
+	&__basket-orders {}
+}
+
+.basket-orders {
+
+	&__container {
+		max-width: 100%;
+
+		&.loading {
+			display: none;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		@include adaptiveValue("font-size", 40, 30, 0);
+		@include adaptiveValue("line-height", 45, 30, 0);
+		margin-bottom: 10px;
+		margin-top: 5px;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: space-evenly;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: rem(15);
+	}
+
+	&__card {
+		border: 1px solid #000;
+		padding: rem(10);
+		border-radius: rem(25);
+	}
+
+	&__title-order {
+		@include adaptiveValue("font-size", 35, 28, 0);
+	}
+
+	&__image-container-order {}
+
+	&__img-order {}
+
+	&__characters-order {
+		@include adaptiveValue("font-size", 28, 24, 0);
+		@include adaptiveValue("line-height", 40, 30, 0);
+	}
+
+	&__btn-order {
+		padding: rem(6) rem(12);
+		@include adaptiveValue("font-size", 15, 13, 0);
+		letter-spacing: rem(2);
+		margin-bottom: rem(10);
+	}
+
+	&__btn-delete {
+		padding: rem(6) rem(12);
+		@include adaptiveValue("font-size", 15, 13, 0);
+		letter-spacing: rem(2);
+
+		&:hover {
+			background: red;
+		}
+	}
+
+	&__modal {
+		position: fixed;
+		z-index: 5;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+
+	&__modal-content {}
+}
+
+.content-modal {
+	background: #E5E5E5;
+	margin: 20% auto;
+	padding: rem(15);
+	border: 1px solid black;
+	border-radius: rem(20);
+	width: 30%;
+	position: relative;
+	text-align: center;
+
+	@media ($tablet) {
+		width: 50%;
+	}
+
+	@media ($mobile) {
+		width: 70%;
+	}
+
+	&__close {
+		cursor: pointer;
+		position: absolute;
+		top: rem(2);
+		right: rem(14);
+	}
+
+	&__title {
+		@include adaptiveValue("font-size", 28, 24, 0);
+		@include adaptiveValue("line-height", 28, 20, 0);
+		margin-bottom: rem(10);
+	}
+
+	&__text {
+		@include adaptiveValue("font-size", 22, 18, 0);
+		line-height: rem(20);
+		margin-bottom: rem(5);
+	}
+
+	&__input {
+		padding: rem(10);
+		background: #E5E5E5;
+		border: 1px solid #000;
+		border-radius: rem(10);
+		@include adaptiveValue("margin-bottom", 15, 8, 0);
+		display: inline-block;
+		min-width: 75%;
+		@include adaptiveValue("font-size", 18, 14, 0);
+
+		&.danger {
+			border: 1px solid red;
+		}
+	}
+
+	&__name {}
+
+	&__comment {}
+
+	&__rating {}
+
+	&__star {
+		@include adaptiveValue("line-height", 28, 20, 0);
+
+		& svg {
+			@include adaptiveValue("width", 28, 24, 0);
+			@include adaptiveValue("height", 28, 24, 0);
+		}
+	}
+
+	&__btn {
+		@include adaptiveValue("font-size", 15, 13, 0);
+		@include adaptiveValue("line-height", 15, 10, 0);
+	}
+}
